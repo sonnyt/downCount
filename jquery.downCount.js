@@ -25,6 +25,25 @@
         var container = this;
 
         /**
+         * Setup daylight
+         */
+        var daylight = function () {
+            var date = new Date();
+
+            // get two dates
+            var jan = new Date(date.getFullYear(), 0, 1);
+            var jul = new Date(date.getFullYear(), 6, 1);
+
+            // get difference
+            var difference = Math.max(jan.getTimezoneOffset(), jul.getTimezoneOffset());
+
+            // check for offset
+            if (difference && date.getTimezoneOffset() < difference) {
+                settings.offset += 1;
+            }
+        }();
+
+        /**
          * Change client's local date to match offset timezone
          * @return {Object} Fixed Date object.
          */
@@ -40,7 +59,7 @@
 
             return new_date;
         };
-        
+
         /**
          * Main downCount function that calculates everything
          */
@@ -56,7 +75,7 @@
                 // stop timer
                 clearInterval(interval);
 
-                if (callback && typeof callback == 'function') callback();
+                // if (callback && typeof callback == 'function') callback();
 
                 return;
             }
