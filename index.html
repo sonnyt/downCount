@@ -112,9 +112,24 @@
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript" src="jquery.downCount.js"></script>
 
+    <script type="text/javascript">
+        function e() {
+            var e = new Date;
+                e.setDate(e.getDate() + 60);
+            
+            var dd = e.getDate();
+            var mm = e.getMonth() + 1;
+            var y = e.getFullYear();
+            
+            var futureFormattedDate = mm + "/" + dd + "/" + y + ' 12:00:00';
+            
+            return futureFormattedDate;
+        }
+    </script>
+
     <script class="source" type="text/javascript">
         $('.countdown').downCount({
-            date: '06/15/2013 12:00:00',
+            date: e(),
             offset: -4
         }, function () {
             alert('WOOT WOOT, done!');
