@@ -113,19 +113,6 @@
     <script type="text/javascript" src="jquery.downCount.js"></script>
 
     <script class="source" type="text/javascript">
-        function futureDate() {
-            var futureDate = new Date();
-                futureDate.setDate(futureDate.getDate() + 60); 
-
-            var dd = futureDate.getDate();
-            var mm = futureDate.getMonth() + 1;
-            var y = futureDate.getFullYear();
-
-            futureFormattedDate = mm + '/'+ dd + '/'+ y;
-
-            return futureFormattedDate;
-        }
-
         $('.countdown').downCount({
             date: '06/10/2013 12:00:00',
             offset: +10
@@ -134,6 +121,6 @@
         });
     </script>
 
-    <a href="https://github.com/sonnyt/downCount" class="btn">Download</a>
+    <a href="https://github.com/sonnyt/downCount" class="btn">Fork Me</a>
 </body>
 </html>
