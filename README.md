@@ -20,4 +20,4 @@ Option | Description
 date | Target date, ex `08/27/2013 12:00:00`
 offset | UTC Standard Timezone offset
 
-You can also append a callback function which is called at the end of the countdown.
+You can also append a callback function which is called when countdown finishes.
