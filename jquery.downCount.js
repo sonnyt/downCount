@@ -56,7 +56,7 @@
                 // stop timer
                 clearInterval(interval);
 
-                // if (callback && typeof callback == 'function') callback();
+                if (callback && typeof callback === 'function') callback();
 
                 return;
             }
@@ -98,7 +98,6 @@
         };
         
         // start
-        countdown();
         var interval = setInterval(countdown, 1000);
     };
 
