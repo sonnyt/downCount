@@ -1,0 +1,20 @@
+{
+  "name": "downCount",
+  "version": "1.0.0",
+  "homepage": "https://github.com/sonnyt/downCount",
+  "description": "jQuery countdown plugin that accounts for timezone.",
+  "main": "jquery.downCount.js",
+  "keywords": [
+    "jquery",
+    "countdown",
+    "timezone"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
